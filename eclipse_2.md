@@ -62,7 +62,7 @@ input.onButtonPressed(Button.A, function () {
 
 Ajoute le bloc ``||basic:montrer LEDs||`` sous le bloc ``||basic:pause (ms)||``.
 
-Dessine un T.
+Dessine le symbole T°.
 
 Regarde l'indice au besoin.
 
@@ -109,7 +109,7 @@ input.onButtonPressed(Button.A, function () {
 
 ```
 
-## Étape 6
+## Étape 7
 
 Ajoute le bloc ``||basic:effacer l'écran||`` sous le bloc ``||basic:pause (ms)||``.
 

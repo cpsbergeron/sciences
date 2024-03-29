@@ -12,7 +12,8 @@
         "main.blocks",
         "main.ts",
         "eclipse_1.md",
-        "eclipse_2.md"
+        "eclipse_2.md",
+        "eclipse_3.md"
     ],
     "testFiles": [
         "test.ts"
