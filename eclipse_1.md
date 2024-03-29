@@ -608,3 +608,7 @@ input.onGesture(Gesture.Shake, function () {
 })
 
 ```
+
+## @showdialog
+
+Télécharge la programmation dans le micro:bit et teste la programmation.
