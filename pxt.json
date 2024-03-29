@@ -11,7 +11,8 @@
         "README.md",
         "main.blocks",
         "main.ts",
-        "eclipse_1.md"
+        "eclipse_1.md",
+        "eclipse_2.md"
     ],
     "testFiles": [
         "test.ts"
