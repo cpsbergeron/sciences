@@ -23,8 +23,7 @@ Remplace la valeur ``||loops: 500||`` par le bloc ``||math: 0   x   0||``.
 ```blocks
 
 loops.everyInterval(0 * 0, function () {
-	
-})
+	})
 
 ```
 
