@@ -13,7 +13,8 @@
         "main.ts",
         "eclipse_1.md",
         "eclipse_2.md",
-        "eclipse_3.md"
+        "eclipse_3.md",
+        "eclipse_v2_1.md"
     ],
     "testFiles": [
         "test.ts"
