@@ -15,7 +15,8 @@
         "eclipse_2.md",
         "eclipse_3.md",
         "eclipse_v2_1.md",
-        "tutorial-info-cache.json"
+        "tutorial-info-cache.json",
+        "eclipse_v2.md"
     ],
     "testFiles": [
         "test.ts"
