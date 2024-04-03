@@ -53,7 +53,7 @@ Remplace la valeur ``||math: 0||`` de droite par par ``||math: 2||``.
 
 ```blocks
 
-loops.everyInterval(1000 * (60 * 5), function () {
+loops.everyInterval(1000 * (60 * 2), function () {
     
 })
 
