@@ -23,7 +23,7 @@ Remplace la valeur ``||loops: 500||`` par le bloc ``||math: 0   x   0||``.
 ```blocks
 
 loops.everyInterval(0 * 0, function () {
-	})
+    })
 
 ```
 
@@ -38,7 +38,7 @@ Remplace la valeur ``||math: 0||`` de droite par le bloc ``||math: 0   x   0||``
 ```blocks
 
 loops.everyInterval(1000 * (0 * 0), function () {
-	
+    
 })
 
 ```
@@ -49,12 +49,12 @@ Modifie le nouveau bloc ``||math: 0   x   0||``.
 
 Remplace la valeur ``||math: 0||`` du centre par ``||math: 60||``.
 
-Remplace la valeur ``||math: 0||`` de droite par par ``||math: 5||``.
+Remplace la valeur ``||math: 0||`` de droite par par ``||math: 2||``.
 
 ```blocks
 
 loops.everyInterval(1000 * (60 * 5), function () {
-	
+    
 })
 
 ```
@@ -67,13 +67,12 @@ Appuie sur ``||datalogger: +||`` pour ajouter une 2e colonne.
 
 ```blocks
 
-loops.everyInterval(1000 * (60 * 5), function () {
+loops.everyInterval(1000 * (60 * 2), function () {
     datalogger.log(
     datalogger.createCV("", 0),
     datalogger.createCV("", 0)
     )
 })
-
 
 ```
 
@@ -83,7 +82,7 @@ Renomme les 2 colonnes du tableau par les valeurs ``||datalogger: T||`` (pour Ce
 
 ```blocks
 
-loops.everyInterval(1000, function () {
+loops.everyInterval(1000 * (60 * 2), function () {
     datalogger.log(
     datalogger.createCV("T", 0),
     datalogger.createCV("L", 0)
@@ -100,7 +99,7 @@ Remplace la valeur ``||datalogger: 0||`` de la colonne ``||datalogger: L||`` par
 
 ```blocks
 
-loops.everyInterval(1000 * (60 * 5), function () {
+loops.everyInterval(1000 * (60 * 2), function () {
     datalogger.log(
     datalogger.createCV("T", input.temperature()),
     datalogger.createCV("L", input.lightLevel())
@@ -109,12 +108,11 @@ loops.everyInterval(1000 * (60 * 5), function () {
 
 ```
 
-
 ## Étape 8
 
 Glisse le bloc ``||input: lorsque le bouton A+B est pressé)||`` dans la zone de programme.
 
-Ajoute le bloc ``||datalogger: delete log||`` (trad. : effacer les données) dans le bloc ``||input: lorsque le bouton A+B est pressé)||``.
+Ajoute le bloc ``||datalogger: delete log||`` (trad. : effacer le journal de données) dans le bloc ``||input: lorsque le bouton A+B est pressé)||``.
 
 ```blocks
 
@@ -122,12 +120,13 @@ input.onButtonPressed(Button.AB, function () {
     datalogger.deleteLog(datalogger.DeleteType.Fast)
 })
 
-
 ```
 
 ## Étape 9
 
-Modifie le bloc ``||datalogger: delete log||`` (trad. : effacer les données).
+Modifie le bloc ``||datalogger: delete log||`` (trad. : effacer le journal de données).
+
+Appuie sur le ``||datalogger: +||`` pour afficher plus d'options.
 
 Remplace la valeur ``||datalogger: fast||`` (trad. : rapide) par la valeur ``||datalogger: plein||`` (trad. : au complet).
 
@@ -158,7 +157,6 @@ input.onButtonPressed(Button.AB, function () {
 
 Ajoute le bloc ``||control: remise à zero||`` sous le bloc  ``||basic: pause (ms)||``.
 
-
 ```blocks
 
 input.onButtonPressed(Button.AB, function () {
@@ -175,7 +173,6 @@ Voici la programmation complète du tutoriel.
 
 Regarde bien l'indice !
 
-
 ```blocks
 
 input.onButtonPressed(Button.AB, function () {
@@ -183,7 +180,7 @@ input.onButtonPressed(Button.AB, function () {
     basic.pause(1000)
     control.reset()
 })
-loops.everyInterval(1000 * (60 * 5), function () {
+loops.everyInterval(1000 * (60 * 2), function () {
     datalogger.log(
     datalogger.createCV("T", input.temperature()),
     datalogger.createCV("L", input.lightLevel())
@@ -192,6 +189,7 @@ loops.everyInterval(1000 * (60 * 5), function () {
 
 ```
 
-## @showdialog
+## Étape 13
 
-Télécharge la programmation dans le micro:bit et teste la programmation.
+Télécharge et teste la la programmation avec le micro:bit.
+
