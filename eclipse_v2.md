@@ -33,33 +33,18 @@ Modifie le bloc ``||math: 0   x   0||``.
 
 Remplace la valeur ``||math: 0||`` de gauche par ``||math: 1000||``.
 
-Remplace la valeur ``||math: 0||`` de droite par le bloc ``||math: 0   x   0||``.
+Remplace la valeur ``||math: 0||`` de droite par ``||math: 5||``.
 
 ```blocks
 
-loops.everyInterval(1000 * (0 * 0), function () {
-    
+loops.everyInterval(1000 * 5, function () {
+	
 })
+
 
 ```
 
 ## Étape 4
-
-Modifie le nouveau bloc ``||math: 0   x   0||``.
-
-Remplace la valeur ``||math: 0||`` du centre par ``||math: 60||``.
-
-Remplace la valeur ``||math: 0||`` de droite par par ``||math: 2||``.
-
-```blocks
-
-loops.everyInterval(1000 * (60 * 2), function () {
-    
-})
-
-```
-
-## Étape 5
 
 Ajoute le bloc ``||datalogger: log data||`` (trad. : enregistrer des données) dans le bloc ``||loops: chaque (ms)||``.
 
@@ -67,7 +52,7 @@ Appuie sur ``||datalogger: +||`` pour ajouter une 2e colonne.
 
 ```blocks
 
-loops.everyInterval(1000 * (60 * 2), function () {
+loops.everyInterval(1000 * 5, function () {
     datalogger.log(
     datalogger.createCV("", 0),
     datalogger.createCV("", 0)
@@ -76,13 +61,13 @@ loops.everyInterval(1000 * (60 * 2), function () {
 
 ```
 
-## Étape 6
+## Étape 5
 
 Renomme les 2 colonnes du tableau par les valeurs ``||datalogger: T||`` (pour Celsius) et ``||datalogger: L||`` (pour luminosité).
 
 ```blocks
 
-loops.everyInterval(1000 * (60 * 2), function () {
+loops.everyInterval(1000 * 5, function () {
     datalogger.log(
     datalogger.createCV("T", 0),
     datalogger.createCV("L", 0)
@@ -99,7 +84,7 @@ Remplace la valeur ``||datalogger: 0||`` de la colonne ``||datalogger: L||`` par
 
 ```blocks
 
-loops.everyInterval(1000 * (60 * 2), function () {
+loops.everyInterval(1000 * 5, function () {
     datalogger.log(
     datalogger.createCV("T", input.temperature()),
     datalogger.createCV("L", input.lightLevel())
@@ -180,7 +165,7 @@ input.onButtonPressed(Button.AB, function () {
     basic.pause(1000)
     control.reset()
 })
-loops.everyInterval(1000 * (60 * 2), function () {
+loops.everyInterval(1000 * 5, function () {
     datalogger.log(
     datalogger.createCV("T", input.temperature()),
     datalogger.createCV("L", input.lightLevel())
